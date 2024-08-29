@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes zoom {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+  }
+  body {
+    @apply font-cormorant;
+     
+  }
+  
+  .animate-zoom {
+    animation: zoom 2s infinite ease-in-out;
+  }
+
+
+  
