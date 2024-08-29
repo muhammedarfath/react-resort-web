@@ -1,4 +1,5 @@
 import React from "react";
+import uniqone from "../../assets/P1022053.jpg";
 
 function SectionThree() {
   return (

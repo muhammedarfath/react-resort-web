@@ -1,13 +1,20 @@
 import React, { useState } from "react";
 import { FaChevronLeft, FaChevronRight, FaEye } from "react-icons/fa";
 import {useNavigate} from 'react-router-dom'
+import imageone from '../../assets/DSC02504.jpg'
+import imagetwo from '../../assets/DSC02467.jpg'
+import imagethree from '../../assets/DSC02386.jpg'
+import imagefour from '../../assets/DSC02462.jpg'
+import imagefive from '../../assets/DSC02520.jpg'
+import imagesix from '../../assets/DSC02474.jpg'
+
 const slides = [
-  "https://muhammedarfath.github.io/theseabeachresort/img/about/1/Kerala%20Alappuza%20Silhouette.jpg",
-  "https://muhammedarfath.github.io/theseabeachresort/img/about/1/Bed%20Beach.jpg",
-  "https://muhammedarfath.github.io/theseabeachresort/img/about/1/landscape.jpg",
-  "https://muhammedarfath.github.io/theseabeachresort/img/cards/rooms/4/Pool%20with%20Raft%20(1).jpg",
-  "https://muhammedarfath.github.io/theseabeachresort/img/cards/rooms/4/Pool%20with%20Raft%20(1).jpg",
-  "https://muhammedarfath.github.io/theseabeachresort/img/cards/1/Food%20content%20creators.jpg",
+  imageone,
+  imagetwo,
+  imagethree,
+  imagefour,
+  imagefive,
+  imagesix,
 ];
 
 
