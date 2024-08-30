@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { FaChevronLeft, FaChevronRight, FaEye } from "react-icons/fa";
 import {useNavigate} from 'react-router-dom'
-import imageone from '../../assets/DSC02504.jpg'
-import imagetwo from '../../assets/DSC02467.jpg'
-import imagethree from '../../assets/DSC02386.jpg'
-import imagefour from '../../assets/DSC02462.jpg'
-import imagefive from '../../assets/DSC02520.jpg'
-import imagesix from '../../assets/DSC02474.jpg'
+import imageone from '../../assets/room1.jpg'
+import imagetwo from '../../assets/room2.jpg'
+import imagethree from '../../assets/room3.jpg'
+import imagefour from '../../assets/room4.jpg'
+import imagefive from '../../assets/room5.jpg'
+import imagesix from '../../assets/room6.jpg'
 
 const slides = [
   imageone,

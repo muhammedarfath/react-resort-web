@@ -60,14 +60,14 @@ function Banner() {
 
         <a
           href="tel:+91  7907224281"
-          className="absolute hidden md:block lg:block z-40 bottom-20 md:bottom-24 lg:bottom-28 border border-black lg:border-white bg-white bg-opacity-50 rounded-xl p-2 md:p-4"
+          className="absolute  md:block lg:block z-40 bottom-20 md:bottom-24 lg:bottom-28 border  lg:border-white bg-white/50 backdrop-blur-lg rounded-xl p-2 md:p-4"
         >
           <h1 className="text-lg md:text-xl lg:text-2xl font-semibold text-black">
             Book Now
           </h1>
         </a>
 
-        <div className="absolute hidden md:block lg:block z-40 border border-black p-2 md:p-4 lg:border-white bottom-10 md:bottom-16 lg:bottom-24 rounded-full animate-bounce">
+        <div className="absolute  md:block lg:block z-40 border bg-white/50 backdrop-blur-lg  p-2 md:p-4 lg:border-white bottom-10 md:bottom-16 lg:bottom-24 rounded-full animate-bounce">
           <MdAdsClick className="text-xl md:text-2xl lg:text-3xl text-black lg:text-white" />
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import banner from "../assets/Taj Website Film 1920x930.mp4";
+import banner from "../assets/P1022042.mp4";
 import AboutText from "../components/HomeSec/AboutText";
 import Profile from "../components/HomeSec/Profile";
 
