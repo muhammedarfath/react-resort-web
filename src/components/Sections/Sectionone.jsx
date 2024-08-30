@@ -11,7 +11,7 @@ function Sectionone() {
     <div className="w-full flex flex-col items-center p-10 sm:p-16 lg:p-36 rounded-xl container mt-11 mx-auto bg-[#F7F5EF]">
       <div className="flex flex-col gap-7 items-center text-center mb-10">
         <small className="text-xl">OUR SERVICES</small>
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl">Hotel Facilities</h1>
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl">Resort Facilities</h1>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-14">
         <div className="flex flex-col gap-2 items-center">

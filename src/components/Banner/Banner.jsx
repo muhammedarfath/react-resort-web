@@ -7,7 +7,7 @@ function Banner() {
   return (
     <div className="w-full h-auto">
       <div className="relative flex flex-col gap-16 md:gap-98 lg:gap-44 overflow-hidden items-center justify-center">
-        <div className="absolute  bg-[#F9DABB] h-1/2 w-full top-0"></div>
+        <div className="absolute bg-[#F9DABB] h-1/2 w-full top-0"></div>
 
         <h1 className="absolute lg:relative z-40 top-28 lg:top-48 lg:left-16 md:top-48 md:left-72 text-2xl md:text-3xl lg:text-5xl text-center px-4 lg:px-0">
           Experience Unparalleled Comfort
@@ -58,11 +58,14 @@ function Banner() {
           </div>
         </motion.div>
 
-        <div className="absolute hidden md:block lg:block z-40 bottom-20 md:bottom-24 lg:bottom-28 border border-black lg:border-white bg-white bg-opacity-50 rounded-xl p-2 md:p-4">
+        <a
+          href="tel:+91  7907224281"
+          className="absolute hidden md:block lg:block z-40 bottom-20 md:bottom-24 lg:bottom-28 border border-black lg:border-white bg-white bg-opacity-50 rounded-xl p-2 md:p-4"
+        >
           <h1 className="text-lg md:text-xl lg:text-2xl font-semibold text-black">
             Book Now
           </h1>
-        </div>
+        </a>
 
         <div className="absolute hidden md:block lg:block z-40 border border-black p-2 md:p-4 lg:border-white bottom-10 md:bottom-16 lg:bottom-24 rounded-full animate-bounce">
           <MdAdsClick className="text-xl md:text-2xl lg:text-3xl text-black lg:text-white" />
