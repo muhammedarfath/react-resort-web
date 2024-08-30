@@ -1,4 +1,5 @@
 import React from "react";
+import Map from "../components/Sections/Map";
 
 function Contact() {
   return (
@@ -74,6 +75,7 @@ function Contact() {
           </div>
         </div>
       </section>
+      <Map/>
     </div>
   );
 }
