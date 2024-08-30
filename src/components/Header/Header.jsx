@@ -76,7 +76,7 @@ function Header() {
 
             <div className="lg:flex items-center gap-11 md:hidden hidden">
               <h1 className="text-xl hidden lg:block md:block font-sans">
-                +91 7907224281
+                +91 9447400150
               </h1>
               <button className="p-3 text-xl text-black">Book Your Stay</button>
             </div>
@@ -113,7 +113,7 @@ function Header() {
         <Footer />
 
         <a
-          href="https://wa.me/917907224281"
+          href="https://wa.me/+919447400150"
           className="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-3 rounded-full shadow-lg"
           target="_blank"
           rel="noopener noreferrer"

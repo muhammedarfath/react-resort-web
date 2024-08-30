@@ -10,14 +10,14 @@ function Footer() {
               <div>
                 <h2 className="mb-6 text-sm font-semibold text-white">Contact</h2>
                 <p>
-                  PO Box 161688 Collins Street West <br /> Victoria 8007
-                  Australia
+                  The Sea Beach Resort North Of Vijaya Childrens Park, <br /> Near United Club,<br />  Beach Road Alleppey 
+                  
                 </p>
               </div>
 
               <div>
-                <p>info@swiss-resort.com</p>
-                <p>+61 3 8888 6789</p>
+                <p>theseaalleppey@gmail.com</p>
+                <p>+919447400150</p>
               </div>
             </div>
 
@@ -84,7 +84,7 @@ function Footer() {
         <div className="flex flex-col md:flex-row justify-between border-t border-gray-700 py-6 px-4 md:px-14">
           <div className="mb-4 md:mb-0">
             <span className="text-white">
-              © 2024 Swissresort.com. All rights reserved.
+              © 2024 BeachResort.com. All rights reserved.
             </span>
           </div>
           <div className="mb-4 md:mb-0 flex items-center">
