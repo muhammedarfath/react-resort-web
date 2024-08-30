@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { RiMenu2Fill, RiCloseFill } from "react-icons/ri";
+import { FaWhatsapp } from "react-icons/fa"; // Import the WhatsApp icon
 import { Link, Outlet } from "react-router-dom";
 import Footer from "../Sections/Footer";
 import LoadingWrapper from "../Loading/LoadingWrapper";
+import logo from "../../assets/BlueLogo.png";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,18 +35,18 @@ function Header() {
         <header
           className={`fixed top-0 z-50 left-0 w-full transition-all duration-300 ease-in-out ${
             isScrolled
-              ? "bg-[#F9DABB] border-b p-6"
-              : "bg-transparent border-b-transparent p-6"
+              ? "bg-[#F9DABB] border-b "
+              : "bg-transparent border-b-transparent"
           }`}
         >
-          <nav className="flex justify-between lg:mx-9 md:mx-9 mx-3 items-center">
-            <div className="flex lg:hidden md:hidden">
+          <nav className="flex justify-between items-center lg:mx-9 md:mx-9 mx-3">
+            <div className="flex items-center lg:hidden md:hidden">
               <button onClick={toggleMenu} className="text-2xl">
                 <RiMenu2Fill className="text-2xl" />
               </button>
             </div>
 
-            <div className="lg:flex md:flex hidden w-full lg:w-auto">
+            <div className="lg:flex md:flex hidden items-center">
               <ul className="flex flex-col lg:flex-row md:flex-row gap-9 text-lg">
                 <Link to="/">
                   <li className="cursor-pointer hover:underline">Home</li>
@@ -61,19 +63,22 @@ function Header() {
               </ul>
             </div>
 
-            <div className="flex-grow text-center">
-              <h1 className="lg:text-3xl md:text-2xl">
-                THE SEA BEACH <br className="hidden lg:block" /> RESORT
-              </h1>
+            <div className="mx-auto flex flex-col items-center justify-center">
+              <img
+                src={logo}
+                alt="Logo"
+                className="lg:w-24 lg:h-24 md:w-20 md:h-20 w-14 h-14 object-contain"
+              />
+              {/* <h1 className="lg:text-3xl md:text-2xl hidden">
+                THE SEA BEACH <br /> RESORT
+              </h1> */}
             </div>
 
             <div className="lg:flex items-center gap-11 md:hidden hidden">
               <h1 className="text-xl hidden lg:block md:block font-sans">
                 +91 7907224281
               </h1>
-              <button className="border p-3 rounded-xl text-black bg-white/50 bg-opacity-25">
-                Book Your Stay
-              </button>
+              <button className="p-3 text-xl text-black">Book Your Stay</button>
             </div>
           </nav>
 
@@ -87,16 +92,34 @@ function Header() {
                 <RiCloseFill />
               </button>
               <ul className="flex flex-col gap-3 text-lg flex-grow justify-center items-center">
-                <li>Home</li>
-                <li>Rooms</li>
-                <li>About Us</li>
-                <li>Contact Us</li>
+                <Link to="/">
+                  <li>Home</li>
+                </Link>
+                <Link to="/rooms">
+                  <li>Rooms</li>
+                </Link>
+                <Link to="/about">
+                  <li>About Us</li>
+                </Link>
+                <Link to="/contact">
+                  <li>Contact Us</li>
+                </Link>
               </ul>
             </div>
           </div>
         </header>
+
         <Outlet />
         <Footer />
+
+        <a
+          href="https://wa.me/917907224281"
+          className="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-3 rounded-full shadow-lg"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaWhatsapp className="text-3xl" />
+        </a>
       </LoadingWrapper>
     </>
   );

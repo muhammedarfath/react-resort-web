@@ -29,35 +29,37 @@ function Loading() {
 
   return (
     <motion.div
-      className="fixed bg-[#F9DABB] h-screen top-0 left-0 w-full h-full flex justify-center items-center z-10"
+      className="fixed bg-[#F9DABB] top-0 left-0 w-full h-full flex justify-center items-center z-10"
       animate={controls}
     >
-      <div className="p-4 rounded-md">
-        <div className="flex items-center flex-col justify-center">
-          <h1 className="text-3xl">THE SEA BEACH RESORT</h1>
+      <div className="p-6 rounded-md max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
+        <div className="flex flex-col items-center justify-center">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
+            THE SEA BEACH RESORT
+          </h1>
           <div className="flex items-center">
             <>
               <motion.span
-                className="w-4 h-4 my-12 mx-1 bg-black rounded-full"
+                className="w-6 h-6 my-4 mx-2 bg-black rounded-full"
                 animate={{
                   y: [0, -20, 0],
-                  opacity: [1, 0], // Fades out
+                  opacity: [1, 0],
                   transition: { duration: 1, repeat: 2 },
                 }}
               />
               <motion.span
-                className="w-4 h-4 my-12 mx-1 bg-black rounded-full"
+                className="w-6 h-6 my-4 mx-2 bg-black rounded-full"
                 animate={{
                   y: [0, -20, 0],
-                  opacity: [1, 0], // Fades out
+                  opacity: [1, 0],
                   transition: { duration: 1, repeat: 1.8, delay: 0.2 },
                 }}
               />
               <motion.span
-                className="w-4 h-4 my-12 mx-1 bg-black rounded-full"
+                className="w-6 h-6 my-4 mx-2 bg-black rounded-full"
                 animate={{
                   y: [0, -20, 0],
-                  opacity: [1, 0], // Fades out
+                  opacity: [1, 0],
                   transition: { duration: 1, repeat: 1.6, delay: 0.4 },
                 }}
               />

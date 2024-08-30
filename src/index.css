@@ -20,4 +20,29 @@
   }
 
 
+  .button-transition {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .button-transition:hover {
+    background-color: #9C8F7F;
+    color: white;
+    border-color: transparent;
+  }
+
+/* Apply this in your CSS file */
+.gallery-img {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners */
+}
+
+.gallery-img:hover {
+  transform: scale(1.9);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  z-index: 10; /* Make sure the hovered image appears on top */
+  border-radius: 30px; /* More rounded corners on hover */
+}
+
+
   

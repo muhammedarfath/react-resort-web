@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 function SectionFour() {
   const testimonials = [
@@ -77,15 +78,15 @@ function SectionFour() {
         <div className="flex justify-center mt-6 space-x-4">
           <button
             onClick={previousTestimonial}
-            className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300"
+            className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 flex items-center justify-center"
           >
-            Previous
+            <FaArrowLeft />
           </button>
           <button
             onClick={nextTestimonial}
-            className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300"
+            className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 flex items-center justify-center"
           >
-            Next
+            <FaArrowRight />
           </button>
         </div>
       </div>
