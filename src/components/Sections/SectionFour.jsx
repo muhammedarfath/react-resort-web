@@ -5,27 +5,22 @@ function SectionFour() {
   const testimonials = [
     {
       quote:
-        "Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application.",
-      name: "Micheal Gough",
-      title: "CEO at Google",
-      image:
-        "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png",
+        "The Honeymoon Cottage at The Sea Beach Resort was the perfect romantic retreat. The breathtaking ocean views and serene atmosphere made our stay truly unforgettable.",
+      name: "Amal",
+      title: "Guest",
+
     },
     {
       quote:
-        "This is a fantastic product with excellent customer support. I've been able to build my project much faster thanks to Flowbite.",
-      name: "Sarah Johnson",
-      title: "Lead Developer at Amazon",
-      image:
-        "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/sarah-johnson.png",
+        "We loved every moment in the sea view rooms at The Sea Beach Resort. The comfort and tranquility provided the ideal escape we were looking for.",
+      name: "Adarsh",
+      title: "Guest",
     },
     {
       quote:
-        "Using Flowbite has been a game changer for our team. The predesigned components have saved us countless hours of development time.",
-      name: "John Doe",
-      title: "CTO at Microsoft",
-      image:
-        "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/john-doe.png",
+        "The swimming pool area at The Sea Beach Resort was perfect for relaxing and unwinding. The peaceful setting made our stay even more enjoyable.",
+      name: "Rakenth",
+      title: "Guest",
     },
   ];
 
@@ -60,11 +55,6 @@ function SectionFour() {
             </p>
           </blockquote>
           <figcaption className="flex items-center justify-center mt-6 space-x-3">
-            <img
-              className="w-6 h-6 rounded-full"
-              src={testimonials[current].image}
-              alt="profile picture"
-            />
             <div className="flex items-center divide-x-2">
               <div className="pr-3 font-medium text-gray-900">
                 {testimonials[current].name}

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { RiMenu2Fill, RiCloseFill } from "react-icons/ri";
-import { FaWhatsapp } from "react-icons/fa"; // Import the WhatsApp icon
+import { FaWhatsapp } from "react-icons/fa";
 import { Link, Outlet } from "react-router-dom";
 import Footer from "../Sections/Footer";
 import LoadingWrapper from "../Loading/LoadingWrapper";
@@ -12,6 +12,10 @@ function Header() {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
   };
 
   const handleScroll = () => {
@@ -35,7 +39,7 @@ function Header() {
         <header
           className={`fixed top-0 z-50 left-0 w-full transition-all duration-300 ease-in-out ${
             isScrolled
-              ? "bg-[#F9DABB] border-b "
+              ? "bg-[#F9DABB] border-b"
               : "bg-transparent border-b-transparent"
           }`}
         >
@@ -54,6 +58,9 @@ function Header() {
                 <Link to="/rooms">
                   <li className="cursor-pointer hover:underline">Rooms</li>
                 </Link>
+                <Link to="/gallery">
+                  <li className="cursor-pointer hover:underline">Gallery</li>
+                </Link>
                 <Link to="/about">
                   <li className="cursor-pointer hover:underline">About Us</li>
                 </Link>
@@ -69,9 +76,6 @@ function Header() {
                 alt="Logo"
                 className="lg:w-24 lg:h-24 md:w-20 md:h-20 w-14 h-14 object-contain"
               />
-              {/* <h1 className="lg:text-3xl md:text-2xl hidden">
-                THE SEA BEACH <br /> RESORT
-              </h1> */}
             </div>
 
             <div className="lg:flex items-center gap-11 md:hidden hidden">
@@ -92,16 +96,19 @@ function Header() {
                 <RiCloseFill />
               </button>
               <ul className="flex flex-col gap-3 text-lg flex-grow justify-center items-center">
-                <Link to="/">
+                <Link to="/" onClick={closeMenu}>
                   <li>Home</li>
                 </Link>
-                <Link to="/rooms">
+                <Link to="/rooms" onClick={closeMenu}>
                   <li>Rooms</li>
                 </Link>
-                <Link to="/about">
+                <Link to="/gallery" onClick={closeMenu}>
+                  <li>Gallery</li>
+                </Link>
+                <Link to="/about" onClick={closeMenu}>
                   <li>About Us</li>
                 </Link>
-                <Link to="/contact">
+                <Link to="/contact" onClick={closeMenu}>
                   <li>Contact Us</li>
                 </Link>
               </ul>

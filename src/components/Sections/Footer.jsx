@@ -1,4 +1,5 @@
 import React from "react";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 
 function Footer() {
   return (
@@ -8,10 +9,13 @@ function Footer() {
           <div className="flex flex-col md:flex-row justify-between gap-8 px-4 py-6">
             <div className="text-white flex flex-col gap-6 md:gap-11">
               <div>
-                <h2 className="mb-6 text-sm font-semibold text-white">Contact</h2>
+                <h2 className="mb-6 text-sm font-semibold text-white">
+                  Contact
+                </h2>
                 <p>
-                  The Sea Beach Resort North Of Vijaya Childrens Park, <br /> Near United Club,<br />  Beach Road Alleppey 
-                  
+                  The Sea Beach Resort North Of Vijaya Childrens Park, <br />{" "}
+                  Near United Club,
+                  <br /> Beach Road Alleppey
                 </p>
               </div>
 
@@ -27,17 +31,17 @@ function Footer() {
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
+                  <a href="/about" className="hover:underline">
                     About
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
+                  <a href="/rooms" className="hover:underline">
                     Rooms
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
+                  <a href="/contact" className="hover:underline">
                     Contact
                   </a>
                 </li>
@@ -48,14 +52,14 @@ function Footer() {
                 </li>
               </ul>
             </div>
-
             <div className="max-w-xl lg:max-w-lg">
               <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                Subscribe to our newsletter.
+                Stay Updated with Our Beach Resort Offers.
               </h2>
               <p className="mt-4 text-base md:text-lg leading-8 text-gray-300">
-                Nostrud amet eu ullamco nisi aute in ad minim nostrud
-                adipisicing velit quis. Duis tempor incididunt dolore.
+                Subscribe to receive the latest news, exclusive offers, and
+                updates about our beach resort. Be the first to know about
+                special promotions and upcoming events.
               </p>
               <div className="mt-6 flex flex-col sm:flex-row max-w-md gap-y-4 gap-x-4">
                 <label htmlFor="email-address" className="sr-only">
@@ -90,8 +94,23 @@ function Footer() {
           <div className="mb-4 md:mb-0 flex items-center">
             <h1 className="text-white">THE SEA BEACH RESORT</h1>
           </div>
-          <div className="flex items-center gap-4">
-            <div className="text-white">Icons Placeholder</div>
+          <div className="flex items-center gap-4 mr-11">
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white"
+            >
+              <FaFacebookF size={20} />
+            </a>
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white"
+            >
+              <FaInstagram size={20} />
+            </a>
           </div>
         </div>
       </footer>

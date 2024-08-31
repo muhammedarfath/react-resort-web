@@ -2,8 +2,6 @@ import React from "react";
 import Map from "../components/Sections/Map";
 
 function Contact() {
-
-
   const onSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -17,18 +15,15 @@ function Contact() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/json"
+        Accept: "application/json",
       },
-      body: json
+      body: json,
     }).then((res) => res.json());
 
     if (res.success) {
       console.log("Success", res);
     }
   };
-
-
-
 
   return (
     <div>
@@ -38,8 +33,10 @@ function Contact() {
             Contact Us
           </h2>
           <p className="mb-8 lg:mb-16 font-light text-center text-black sm:text-xl">
-            Got a technical issue? Want to send feedback about a beta feature?
-            Need details about our Business plan? Let us know.
+            Please share your details with us, and we'll get back to you
+            promptly. We're here to assist with any inquiries or bookings you
+            may have. Your information helps us ensure the best possible
+            experience.
           </p>
           <form action="#" className="space-y-8" onSubmit={onSubmit}>
             <div>
@@ -90,14 +87,10 @@ function Contact() {
                 placeholder="Leave a comment..."
               ></textarea>
             </div>
-            <button
-              type="submit"
-              className="border p-3"
-            >
+            <button type="submit" className="border p-3">
               Send message
             </button>
           </form>
-
         </div>
       </section>
       <Map />
