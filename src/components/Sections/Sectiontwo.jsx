@@ -8,11 +8,13 @@ import imagefour from "../../assets/room4.jpg";
 import imagefive from "../../assets/room5.jpg";
 import imagesix from "../../assets/room6.jpg";
 import { motion } from "framer-motion";
+import { Skeleton } from "@nextui-org/react";
 
 const slides = [imageone, imagetwo, imagethree, imagefour, imagefive, imagesix];
 
-function Sectiontwo() {
+function SectionTwo() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [loading, setLoading] = useState(false);
 
   const nextSlide = () => {
     const maxIndex =
@@ -62,11 +64,13 @@ function Sectiontwo() {
               className="w-full sm:w-1/2 md:w-1/3 p-2 flex-shrink-0"
               key={index}
             >
-              <div className="bg-indigo-50 rounded-2xl h-96 flex items-center justify-center  overflow-hidden">
+              <div className="bg-indigo-50 rounded-2xl h-96 flex items-center justify-center overflow-hidden">
+                {!loading && <Skeleton className="w-full h-full" />}
                 <img
                   src={slide}
                   alt={`Slide ${index + 1}`}
                   className="object-cover w-full h-full"
+                  onLoad={()=>setLoading(true)}
                 />
               </div>
             </div>
@@ -94,4 +98,4 @@ function Sectiontwo() {
   );
 }
 
-export default Sectiontwo;
+export default SectionTwo;

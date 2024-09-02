@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import uniqone from "../../assets/uniqone.jpg";
 import uniqtwo from "../../assets/uniq2.webp";
 import uniqthree from "../../assets/uniq3.jpg";
+import { Skeleton } from "@nextui-org/react";
 
 function SectionThree() {
+  const [loading, setLoading] = useState(false);
+
   return (
     <>
       <div className="w-full flex justify-end mt-16">
@@ -13,18 +16,24 @@ function SectionThree() {
               <small className="text-gray-400 mb-2 text-xl">
                 There's So Much to Discover
               </small>
-              <h1 className="lg:text-5xl md:text-5xl text-3xl  text-start font-bold mb-4">Unique <br /> Experiences</h1>
+              <h1 className="lg:text-5xl md:text-5xl text-3xl  text-start font-bold mb-4">
+                Unique <br /> Experiences
+              </h1>
               <p className="text-lg text-start  mb-6">
                 Welcome to the best deluxe resort <br /> in Kerala.
               </p>
             </div>
 
             <div className="flex lg:flex-row flex-col justify-center gap-4">
+              {!loading && <Skeleton className="w-full h-full" />}
+
               <img
                 src={uniqone}
                 alt="Experience 1"
                 className=" object-cover rounded-lg shadow-lg w-80 h-80"
+                onLoad={() => setLoading(true)}
               />
+
               <img
                 src={uniqtwo}
                 alt="Experience 2"
