@@ -9,6 +9,7 @@ export default {
     extend: {
       fontFamily: {
         'cormorant': ['"Cormorant Garamond"', 'serif'],
+        sans: ['Montserrat', 'sans-serif'],
       },
     },
   },

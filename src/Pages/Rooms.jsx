@@ -113,7 +113,7 @@ function Rooms() {
   };
 
   return (
-    <div className="container mx-auto mt-36 px-4">
+    <div className="container mx-auto font-sans mt-36 px-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {rooms.map((room) => (
           <div
@@ -127,8 +127,8 @@ function Rooms() {
             />
             <div className="p-4 flex flex-col gap-4">
               <div className="flex justify-between">
-                <h3 className="text-2xl font-bold">{room.name}</h3>
-                <p className="text-black font-sans text-xl">{room.rate}</p>
+                <h3 className="text-xl font-bold">{room.name}</h3>
+                <p className="text-black font-sans text-lg">{room.rate}</p>
               </div>
               <div className="flex gap-8">
                 <div className="flex items-center gap-2">

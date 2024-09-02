@@ -37,7 +37,7 @@ function Header() {
     <>
       <LoadingWrapper>
         <header
-          className={`fixed top-0 z-50 left-0 w-full transition-all duration-300 ease-in-out ${
+          className={`fixed top-0 z-50 font-sans left-0 w-full transition-all duration-300 ease-in-out ${
             isScrolled
               ? "bg-[#F9DABB] border-b"
               : "bg-transparent border-b-transparent"
@@ -51,7 +51,7 @@ function Header() {
             </div>
 
             <div className="lg:flex md:flex hidden items-center">
-              <ul className="flex flex-col lg:flex-row md:flex-row gap-9 text-lg">
+              <ul className="flex flex-col lg:flex-row md:flex-row gap-9 text-md">
                 <Link to="/">
                   <li className="cursor-pointer hover:underline">Home</li>
                 </Link>
@@ -79,10 +79,14 @@ function Header() {
             </div>
 
             <div className="lg:flex items-center gap-11 md:hidden hidden">
-              <h1 className="text-xl hidden lg:block md:block font-sans">
+              <h1 className="text-md font-semibold hidden lg:block md:block font-sans">
                 +91 9447400150
               </h1>
-              <button className="p-3 text-xl text-black">Book Your Stay</button>
+              <Link to="/contact">
+                <button className="p-3 text-md text-black">
+                  Book Your Stay
+                </button>
+              </Link>
             </div>
           </nav>
 

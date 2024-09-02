@@ -1,4 +1,5 @@
 import React from "react";
+import { toast, Toaster } from "react-hot-toast";
 import Map from "../components/Sections/Map";
 
 function Contact() {
@@ -6,22 +7,28 @@ function Contact() {
     event.preventDefault();
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "c62ccd2c-9de6-4bf0-bfe4-5f1faf35738f");
+    formData.append("access_key", "3dc9160f-4797-4cea-9a14-0bd7c3a8d621");
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
 
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: json,
-    }).then((res) => res.json());
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: json,
+      }).then((res) => res.json());
 
-    if (res.success) {
-      console.log("Success", res);
+      if (res.success) {
+        toast.success("Message sent successfully!");
+      } else {
+        toast.error("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      toast.error("Network error. Please check your connection.");
     }
   };
 
@@ -94,6 +101,7 @@ function Contact() {
         </div>
       </section>
       <Map />
+      <Toaster position="top-right" />
     </div>
   );
 }
