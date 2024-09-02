@@ -5,7 +5,6 @@ import uniqthree from "../../assets/uniq3.jpg";
 import { Skeleton } from "@nextui-org/react";
 
 function SectionThree() {
-  const [loading, setLoading] = useState(false);
 
   return (
     <>
@@ -25,13 +24,10 @@ function SectionThree() {
             </div>
 
             <div className="flex lg:flex-row flex-col justify-center gap-4">
-              {!loading && <Skeleton className="w-full h-full" />}
-
               <img
                 src={uniqone}
                 alt="Experience 1"
                 className=" object-cover rounded-lg shadow-lg w-80 h-80"
-                onLoad={() => setLoading(true)}
               />
 
               <img

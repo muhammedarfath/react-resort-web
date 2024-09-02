@@ -1,13 +1,13 @@
 import React from "react";
 import { MdAdsClick } from "react-icons/md";
-import { motion } from "framer-motion"; // Import Framer Motion
-import mobilebanner from "../../assets/Arafed Bed View Castle.jpg";
+import { motion } from "framer-motion"; 
+import mobilebanner from "../../assets/Arafed-Bed-View-Castle.jpg";
 import sea from '../../assets/waves.mp4'
+import banner2 from '../../assets/banner2.png'
 function Banner() {
   return (
     <div className="w-full h-auto">
       <div className="relative flex flex-col gap-16 md:gap-98 lg:gap-44 overflow-hidden items-center justify-center">
-        {/* <div className="absolute bg-[#F9DABB] h-1/2 w-full top-0"></div> */}
         <div className="absolute w-full object-cover opacity-50 h-1/2 top-0">
           <video autoPlay loop muted id="video" className="h-full w-full object-cover">
             <source src={sea} />
@@ -19,7 +19,7 @@ function Banner() {
 
         <div className="container hidden md:block md:mt-60 lg:mt-16 lg:block mx-auto z-30">
           <img
-            src="https://demoapus1.com/swissresort/wp-content/uploads/2024/01/slider21.png"
+            src={banner2}
             alt="Resort Banner"
             className="w-full h-auto rounded-2xl"
           />
