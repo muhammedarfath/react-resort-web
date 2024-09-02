@@ -1,8 +1,39 @@
 import React from 'react';
-import { FaTimes, FaCheck } from 'react-icons/fa'; // Import icons from react-icons
+import { FaTimes, FaCheck } from 'react-icons/fa'; 
+import { toast } from 'react-hot-toast'; // Make sure to install this if not already installed
 
-function Modal({ show, onClose, room, onSubmit }) {
+function Modal({ show, onClose, room }) {
   if (!show) return null;
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "3dc9160f-4797-4cea-9a14-0bd7c3a8d621");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: json,
+      }).then((res) => res.json());
+
+      if (res.success) {
+        toast.success("Message sent successfully!");
+        onClose(); // Close the modal after successful submission
+      } else {
+        toast.error("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      toast.error("Network error. Please check your connection.");
+    }
+  };
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
@@ -40,13 +71,13 @@ function Modal({ show, onClose, room, onSubmit }) {
               className="px-4 py-2 bg-gray-500 text-white rounded flex items-center gap-2 mr-2"
               onClick={onClose}
             >
-              <FaTimes /> 
+              <FaTimes /> Cancel
             </button>
             <button
               type="submit"
               className="px-4 py-2 bg-[#899090] text-white rounded flex items-center gap-2"
             >
-              <FaCheck /> 
+              <FaCheck /> Submit
             </button>
           </div>
         </form>

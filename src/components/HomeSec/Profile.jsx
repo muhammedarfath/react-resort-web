@@ -2,13 +2,20 @@ import React from "react";
 import owner from "../../assets/owner.jpeg";
 import person2 from "../../assets/person2.jpeg"; 
 import person3 from "../../assets/person3.jpeg"; 
+import person4 from "../../assets/ashok.jpeg"; 
 
 const people = [
   {
-    name: "Ivan Joseph",
+    name: "Ivan Araujo",
     description:
       "Ivan Araujo, a former senior officer in the Kerala Police Service, retired in 2021 and decided to spend the rest of his time in the hospitality industry. In Alleppey district, Kerala, the incredible backwaters, traditional snake boats, beautiful beaches, houseboats, and Shikara boat rides are the main tourist attractions, along with old temples and churches. Mr. Ivan also constructed a new seaview resort on the beach and named it 'The Sea Beach Resort.'",
     image: owner,
+  },
+  {
+    name: "Ashok Wilfred George",
+    description:
+      "Ashok George is an experienced professional with over 40 years in Learning & Development, Business Coaching, HR Consulting, and Performance Management. He has worked across various industries including Financial Services, Education, Pharmaceuticals, IT, and FMCG, and has operated in countries like India, the UK, Malaysia, Dubai, and more. Ashok has successfully transformed business and talent functions for major companies such as Abbott, Toyota, Maruti, IBM, Infosys, Unilever, and many others. His expertise spans a wide range of sectors and geographies, making him a versatile and accomplished leader in his field.",
+    image: person4,
   },
   {
     name: "Siva Kumar Pavalam",
@@ -22,6 +29,7 @@ const people = [
       "Mr. Peter Cherian, with a B.Tech in Electrical Engineering and an MBA in Marketing and HR, has held leadership roles at Tata Consultancy Services, HCL Technologies, and Maersk Data Europe. He was the Director of HR at Intergraph Corporation in India and the US, and currently serves as an advisor at DivIHN Integration, USA, while also being a guest faculty member at NIT Himachal Pradesh.",
     image: person3,
   },
+
  
 ];
 

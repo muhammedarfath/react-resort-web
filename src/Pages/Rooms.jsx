@@ -6,6 +6,8 @@ import imagefour from "../assets/room4.jpg";
 import imagefive from "../assets/room5.jpg";
 import imagesix from "../assets/room6.jpg";
 import imageseven from "../assets/room7.jpg";
+import imageseight from "../assets/prm.jpg";
+import imagesnain from "../assets/Traditional-House-Interior-AI.jpg";
 import Modal from "../components/Modal/Modal";
 import { LiaBathSolid } from "react-icons/lia";
 import { RiUserFollowLine } from "react-icons/ri";
@@ -15,73 +17,73 @@ import { FaArrowRightLong } from "react-icons/fa6";
 const rooms = [
   {
     id: 1,
-    image: imageone,
-    name: "Deluxe Room",
+    image: imagetwo,
+    name: "Super Deluxe",
     people: 2,
     bathrooms: 1,
-    rate: "₹150/night",
+    rate: "₹3500",
     description:
-      "A cozy deluxe room with modern amenities and a comfortable king-sized bed.",
+      "A luxurious Super Deluxe room, offering comfort and elegance, perfect for a relaxing stay.",
   },
   {
     id: 2,
-    image: imagetwo,
-    name: "Superior Room",
-    people: 3,
+    image: imagethree,
+    name: "Super Deluxe",
+    people: 2,
     bathrooms: 1,
-    rate: "₹200/night",
+    rate: "₹3500",
     description:
-      "Spacious superior room with a queen-sized bed and a beautiful city view.",
+      "The Leo XIII Super Deluxe room combines sophistication and comfort for an exquisite stay.",
   },
   {
     id: 3,
-    image: imagethree,
-    name: "Family Suite",
-    people: 4,
-    bathrooms: 2,
-    rate: "₹300/night",
+    image: imagefive,
+    name: "Deluxe",
+    people: 2,
+    bathrooms: 1,
+    rate: "₹2500",
     description:
-      "Perfect for families, this suite includes two bedrooms and a large living area.",
+      "The Rukma Deluxe room offers a cozy and inviting atmosphere, ideal for a pleasant stay.",
   },
   {
     id: 4,
-    image: imagefour,
-    name: "Single Room",
-    people: 1,
+    image: imageone,
+    name: "Deluxe",
+    people: 2,
     bathrooms: 1,
-    rate: "₹100/night",
+    rate: "₹2500",
     description:
-      "A compact and budget-friendly single room with all essential facilities.",
+      "The Owner Deluxe room provides comfort and a tranquil environment for a restful experience.",
   },
   {
     id: 5,
-    image: imagefive,
-    name: "Double Room",
+    image: imageseight,
+    name: "Premium Suite",
     people: 2,
     bathrooms: 1,
-    rate: "₹180/night",
+    rate: "₹3000",
     description:
-      "Comfortable double room with twin beds and a relaxing ambiance.",
+      "Our MD Premium Suite offers a luxurious and spacious setting, perfect for an indulgent stay.",
   },
   {
     id: 6,
     image: imagesix,
-    name: "Luxury Suite",
-    people: 4,
-    bathrooms: 2,
-    rate: "₹350/night",
+    name: "Premium Suite",
+    people: 2,
+    bathrooms: 1,
+    rate: "₹3000",
     description:
-      "Luxury suite with elegant furnishings, two bathrooms, and a balcony.",
+      "The VIP Premium Suite is designed for ultimate comfort and luxury, ensuring an exclusive stay.",
   },
   {
     id: 7,
-    image: imageseven,
-    name: "Presidential Suite",
-    people: 5,
-    bathrooms: 3,
-    rate: "₹500/night",
+    image: imagesnain,
+    name: "Board Room",
+    people: 8,
+    bathrooms: 1,
+    rate: "₹1500/8hr",
     description:
-      "Top-of-the-line presidential suite with a private terrace and exclusive amenities.",
+      "Our Board Room is ideal for meetings and conferences, offering a professional and well-equipped space.",
   },
 ];
 
