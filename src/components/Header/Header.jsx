@@ -71,11 +71,13 @@ function Header() {
             </div>
 
             <div className="mx-auto flex flex-col items-center justify-center">
-              <img
-                src={logo}
-                alt="Logo"
-                className="lg:w-24 lg:h-24 md:w-20 md:h-20 w-14 h-14 object-contain"
-              />
+              <Link to="/">
+                <img
+                  src={logo}
+                  alt="Logo"
+                  className="lg:w-24 lg:h-24 md:w-20 md:h-20 w-14 h-14 object-contain"
+                />
+              </Link>
             </div>
 
             <div className="lg:flex items-center gap-11 md:hidden hidden">

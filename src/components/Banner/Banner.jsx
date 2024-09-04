@@ -1,9 +1,9 @@
 import React from "react";
 import { MdAdsClick } from "react-icons/md";
 import { motion } from "framer-motion"; 
-import mobilebanner from "../../assets/Arafed-Bed-View-Castle.jpg";
+import mobilebanner from "../../assets/photo_2024-09-04_19-22-0.jpg";
 import sea from '../../assets/waves.mp4'
-import banner2 from '../../assets/banner2.png'
+import banner2 from '../../assets/photo1.jpg'
 function Banner() {
   return (
     <div className="w-full h-auto">
@@ -49,13 +49,13 @@ function Banner() {
           <div className="flex gap-5 md:gap-7">
             <div className="flex flex-col gap-2 md:gap-3">
               <span className="text-4xl md:text-5xl lg:text-6xl font-bold">
-                35
+                6
               </span>
               <h1 className="text-lg md:text-xl lg:text-2xl"> Rooms</h1>
             </div>
             <div className="flex flex-col gap-2 md:gap-3">
               <span className="text-4xl md:text-5xl lg:text-6xl font-bold">
-                16
+                4
               </span>
               <h1 className="text-lg md:text-xl lg:text-2xl"> Suits</h1>
             </div>

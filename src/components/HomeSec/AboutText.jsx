@@ -21,23 +21,17 @@ function AboutText() {
       </div>
       <div className="flex flex-wrap justify-center gap-10 md:gap-20 lg:gap-36">
         <div className="flex flex-col items-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl">12m+</h1>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl">8k</h1>
           <span className="text-sm sm:text-base md:text-lg">
             Happy Customers
           </span>
         </div>
         <div className="flex flex-col items-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl">28</h1>
-          <span className="text-sm sm:text-base md:text-lg">
-            Luxe Apartments
-          </span>
-        </div>
-        <div className="flex flex-col items-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl">22</h1>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl">6</h1>
           <span className="text-sm sm:text-base md:text-lg">Bedrooms</span>
         </div>
         <div className="flex flex-col items-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl">18</h1>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl">3</h1>
           <span className="text-sm sm:text-base md:text-lg">Square Areas</span>
         </div>
       </div>
