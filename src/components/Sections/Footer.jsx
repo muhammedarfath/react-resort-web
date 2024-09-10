@@ -4,12 +4,12 @@ import { FaFacebookF, FaInstagram } from "react-icons/fa";
 function Footer() {
   return (
     <div>
-      <footer className="bg-[#122223] mt-36">
+      <footer className="bg-[#122223] mt-36 font-sans">
         <div className="mx-auto p-6 md:p-14 w-full max-w-screen-xl">
-          <div className="flex flex-col md:flex-row justify-between gap-8 px-4 py-6">
+          <div className="flex flex-col md:flex-row justify-between gap-20 px-4 py-6">
             <div className="text-white flex flex-col gap-6 md:gap-11">
               <div>
-                <h2 className="mb-6 text-sm font-semibold text-white">
+                <h2 className="mb-6 font-semibold text-white">
                   Contact
                 </h2>
                 <p>
@@ -29,34 +29,34 @@ function Footer() {
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                 Links
               </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
+              <ul className="text-gray-500 dark:text-gray-400 font-thin">
                 <li className="mb-4">
-                  <a href="/about" className="hover:underline">
+                  <a href="/about" className="underline">
                     About
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="/rooms" className="hover:underline">
+                  <a href="/rooms" className="underline">
                     Rooms
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="/contact" className="hover:underline">
+                  <a href="/contact" className="underline">
                     Contact
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
+                  <a href="#" className="underline">
                     Privacy Policy
                   </a>
                 </li>
               </ul>
             </div>
             <div className="max-w-xl lg:max-w-lg">
-              <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              <h2 className="text-lg md:text-lg font-bold tracking-tight text-white sm:text-xl">
                 Stay Updated with Our Beach Resort Offers.
               </h2>
-              <p className="mt-4 text-base md:text-lg leading-8 text-gray-300">
+              <p className="mt-4 text-sm md:text-md leading-2 text-gray-300">
                 Subscribe to receive the latest news, exclusive offers, and
                 updates about our beach resort. Be the first to know about
                 special promotions and upcoming events.
@@ -104,7 +104,7 @@ function Footer() {
               <FaFacebookF size={20} />
             </a>
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/theseaalleppey/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white"

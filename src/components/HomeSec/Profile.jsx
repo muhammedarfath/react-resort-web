@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { MdArrowRightAlt } from "react-icons/md";
 import owner from "../../assets/owner.jpeg";
 import person2 from "../../assets/person2.jpeg"; 
 import person3 from "../../assets/person3.jpeg"; 
@@ -29,11 +30,15 @@ const people = [
       "Mr. Peter Cherian, with a B.Tech in Electrical Engineering and an MBA in Marketing and HR, has held leadership roles at Tata Consultancy Services, HCL Technologies, and Maersk Data Europe. He was the Director of HR at Intergraph Corporation in India and the US, and currently serves as an advisor at DivIHN Integration, USA, while also being a guest faculty member at NIT Himachal Pradesh.",
     image: person3,
   },
-
- 
 ];
 
 function Profile() {
+  const [expandedIndex, setExpandedIndex] = useState(null);
+
+  const toggleExpand = (index) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
+
   return (
     <div className="mt-40 w-full mx-auto flex flex-col gap-10">
       {people.map((person, index) => (
@@ -49,9 +54,25 @@ function Profile() {
             <h1 className="text-2xl md:text-4xl lg:text-5xl text-start">
               {person.name}
             </h1>
-            <span className="text-sm md:text-base lg:text-lg text-start">
+            <p
+              className={`text-sm md:text-base lg:text-lg text-start overflow-hidden ${
+                expandedIndex === index ? "line-clamp-none" : "line-clamp-2"
+              }`}
+            >
               {person.description}
-            </span>
+            </p>
+            <button
+              onClick={() => toggleExpand(index)}
+              className="mt-2 flex items-center text-[#000] hover:underline"
+            >
+              {expandedIndex === index ? "Show Less" : "Read More"}
+              <MdArrowRightAlt
+                size={24}
+                className={`ml-2 transform transition-transform duration-300 ${
+                  expandedIndex === index ? "rotate-90" : "rotate-0"
+                }`}
+              />
+            </button>
           </div>
         </div>
       ))}

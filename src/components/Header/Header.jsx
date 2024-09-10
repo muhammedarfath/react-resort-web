@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { RiMenu2Fill, RiCloseFill } from "react-icons/ri";
+import {
+  RiMenu2Fill,
+  RiCloseFill,
+  RiHome2Fill,
+  RiHotelFill,
+  RiGalleryFill,
+  RiContactsFill,
+  RiInformationFill,
+} from "react-icons/ri";
 import { FaWhatsapp } from "react-icons/fa";
 import { Link, Outlet } from "react-router-dom";
 import Footer from "../Sections/Footer";
@@ -91,7 +99,6 @@ function Header() {
               </Link>
             </div>
           </nav>
-
           <div
             className={`fixed inset-0 bg-[#F9DABB]/50 backdrop-blur-md transition-transform duration-300 ${
               isMenuOpen ? "translate-y-0" : "-translate-y-full"
@@ -101,21 +108,38 @@ function Header() {
               <button onClick={toggleMenu} className="self-end text-2xl mb-4">
                 <RiCloseFill />
               </button>
-              <ul className="flex flex-col gap-3 text-lg flex-grow justify-center items-center">
-                <Link to="/" onClick={closeMenu}>
-                  <li>Home</li>
+              <h2 className="text-2xl font-bold text-center text-[#333] mb-6">
+                The Sea Beach Resort
+              </h2>
+              <p className="text-center text-lg text-[#333] mb-4">
+                Experience tranquility and luxury by the sea. Explore our rooms,
+                gallery, and more.
+              </p>
+              <ul className="flex flex-col gap-3 text-lg flex-grow justify-center">
+                <Link to="/" onClick={closeMenu} className="w-full">
+                  <li className="flex items-center justify-start w-full p-4 bg-white rounded-lg shadow-md hover:bg-[#F9DABB] transition">
+                    <RiHome2Fill className="mr-3 text-xl" /> Home
+                  </li>
                 </Link>
-                <Link to="/rooms" onClick={closeMenu}>
-                  <li>Rooms</li>
+                <Link to="/rooms" onClick={closeMenu} className="w-full">
+                  <li className="flex items-center justify-start w-full p-4 bg-white rounded-lg shadow-md hover:bg-[#F9DABB] transition">
+                    <RiHotelFill className="mr-3 text-xl" /> Rooms
+                  </li>
                 </Link>
-                <Link to="/gallery" onClick={closeMenu}>
-                  <li>Gallery</li>
+                <Link to="/gallery" onClick={closeMenu} className="w-full">
+                  <li className="flex items-center justify-start w-full p-4 bg-white rounded-lg shadow-md hover:bg-[#F9DABB] transition">
+                    <RiGalleryFill className="mr-3 text-xl" /> Gallery
+                  </li>
                 </Link>
-                <Link to="/about" onClick={closeMenu}>
-                  <li>About Us</li>
+                <Link to="/about" onClick={closeMenu} className="w-full">
+                  <li className="flex items-center justify-start w-full p-4 bg-white rounded-lg shadow-md hover:bg-[#F9DABB] transition">
+                    <RiInformationFill className="mr-3 text-xl" /> About Us
+                  </li>
                 </Link>
-                <Link to="/contact" onClick={closeMenu}>
-                  <li>Contact Us</li>
+                <Link to="/contact" onClick={closeMenu} className="w-full">
+                  <li className="flex items-center justify-start w-full p-4 bg-white rounded-lg shadow-md hover:bg-[#F9DABB] transition">
+                    <RiContactsFill className="mr-3 text-xl" /> Contact Us
+                  </li>
                 </Link>
               </ul>
             </div>

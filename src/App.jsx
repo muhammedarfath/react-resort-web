@@ -6,6 +6,7 @@ import About from './Pages/About';
 import Rooms from './Pages/Rooms';
 import Contact from './Pages/Contact';
 import Gallrey from './Pages/Gallrey';
+import N404 from './Pages/N404';
 function App() {
 
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path='/rooms' element={<Rooms />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='/gallery' element={<Gallrey />} />
+            <Route path='/*' element={<N404 />} />
           </Route>
         </Routes>
       </Router> 

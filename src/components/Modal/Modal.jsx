@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaTimes, FaCheck } from 'react-icons/fa'; 
-import { toast } from 'react-hot-toast'; // Make sure to install this if not already installed
+import { toast } from 'react-hot-toast'; 
 
 function Modal({ show, onClose, room }) {
   if (!show) return null;
@@ -26,7 +26,7 @@ function Modal({ show, onClose, room }) {
 
       if (res.success) {
         toast.success("Message sent successfully!");
-        onClose(); // Close the modal after successful submission
+        onClose(); 
       } else {
         toast.error("Something went wrong. Please try again.");
       }
@@ -36,9 +36,11 @@ function Modal({ show, onClose, room }) {
   };
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-      <div className="bg-white p-6 rounded-lg w-1/3">
-        <h2 className="text-xl font-bold mb-4">Book Room: {room.name}</h2>
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+      <div className="bg-white p-6 rounded-lg w-full max-w-lg mx-4 md:mx-0 md:w-1/3">
+        <h2 className="text-xl font-bold mb-4 text-center md:text-left">
+          Book Room: {room.name}
+        </h2>
         <form onSubmit={onSubmit}>
           <div className="mb-4">
             <label className="block text-gray-700">Customer Name</label>

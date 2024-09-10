@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import mobilebanner from "../../assets/photo_2024-09-04_19-22-0.jpg";
 import sea from '../../assets/waves.mp4'
 import banner2 from '../../assets/photo1.jpg'
+import { PiPhoneCall } from "react-icons/pi";
+
 function Banner() {
   return (
     <div className="w-full h-auto">

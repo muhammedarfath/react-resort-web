@@ -36,7 +36,7 @@ function SectionTwo() {
       <div className="flex justify-between lg:flex-row flex-col w-full container">
         <div className="text-start mb-8">
           <small className="text-gray-600 block mb-1">EXPLORE</small>
-          <h1 className="text-3xl font-bold">Rooms & Suites</h1>
+          <h1 className="text-3xl font-bold">Rooms & Suits</h1>
         </div>
         <div className="flex gap-3 items-center">
           <h1>VIEW ALL MORE</h1>

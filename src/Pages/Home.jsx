@@ -6,6 +6,7 @@ import SectionThree from "../components/Sections/SectionThree";
 import SectionFour from "../components/Sections/SectionFour";
 import SectionFive from "../components/Sections/SectionFive";
 import Footer from "../components/Sections/Footer";
+import SectionAdd from "../components/Sections/SectionAdd";
 
 
 
@@ -13,6 +14,7 @@ function Home() {
   return (
     <div>
       <Banner />
+      <SectionAdd/>
       <Sectionone />
       <Sectiontwo />
       <SectionThree />
