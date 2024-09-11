@@ -1,14 +1,17 @@
-import React from 'react';
-import { FaTimes, FaCheck } from 'react-icons/fa'; 
+import React, { useState } from 'react';
+import { FaTimes, FaCheck, FaSpinner } from 'react-icons/fa'; 
 import { toast } from 'react-hot-toast'; 
 
 function Modal({ show, onClose, room }) {
+  const [loading, setLoading] = useState(false);
+
   if (!show) return null;
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    const formData = new FormData(event.target);
+    setLoading(true); 
 
+    const formData = new FormData(event.target);
     formData.append("access_key", "3dc9160f-4797-4cea-9a14-0bd7c3a8d621");
 
     const object = Object.fromEntries(formData);
@@ -32,12 +35,14 @@ function Modal({ show, onClose, room }) {
       }
     } catch (error) {
       toast.error("Network error. Please check your connection.");
+    } finally {
+      setLoading(false); // Stop loading
     }
   };
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-      <div className="bg-white p-6 rounded-lg w-full max-w-lg mx-4 md:mx-0 md:w-1/3">
+      <div className="bg-white p-6 rounded-lg w-full max-w-lg mx-4 md:mx-6 md:w-4/5 lg:w-1/3">
         <h2 className="text-xl font-bold mb-4 text-center md:text-left">
           Book Room: {room.name}
         </h2>
@@ -57,14 +62,14 @@ function Modal({ show, onClose, room }) {
               type="tel"
               name="phoneNumber"
               required
-              className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-black"
+              className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
             />
           </div>
           <div className="mb-4">
             <label className="block text-gray-700">Description</label>
             <textarea
               name="description"
-              className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-black"
+              className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
             ></textarea>
           </div>
           <div className="flex justify-end">
@@ -77,9 +82,11 @@ function Modal({ show, onClose, room }) {
             </button>
             <button
               type="submit"
-              className="px-4 py-2 bg-[#899090] text-white rounded flex items-center gap-2"
+              className="px-4 py-2 bg-[#899090] text-white rounded flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+              disabled={loading}
             >
-              <FaCheck /> Submit
+              {loading ? <FaSpinner className="animate-spin" /> : <FaCheck />}
+              {loading ? 'Submitting...' : 'Submit'}
             </button>
           </div>
         </form>

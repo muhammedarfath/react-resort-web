@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight, FaEye } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import imageone from "../../assets/room1.jpg";
@@ -18,12 +18,21 @@ function SectionTwo() {
   const nextSlide = () => {
     const maxIndex =
       window.innerWidth >= 1024 ? slides.length - 3 : slides.length - 1;
-    setCurrentIndex((prevIndex) => Math.min(prevIndex + 1, maxIndex));
+    setCurrentIndex((prevIndex) => (prevIndex < maxIndex ? prevIndex + 1 : 0));
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => Math.max(prevIndex - 1, 0));
+    setCurrentIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : slides.length - 1));
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 2000); 
+
+    return () => clearInterval(interval);
+  }, []);
+
   const navigate = useNavigate();
 
   return (

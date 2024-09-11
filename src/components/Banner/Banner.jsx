@@ -1,9 +1,9 @@
 import React from "react";
 import { MdAdsClick } from "react-icons/md";
-import { motion } from "framer-motion"; 
+import { motion } from "framer-motion";
 import mobilebanner from "../../assets/photo_2024-09-04_19-22-0.jpg";
-import sea from '../../assets/waves.mp4'
-import banner2 from '../../assets/photo1.jpg'
+import sea from "../../assets/waves.mp4";
+import banner2 from "../../assets/photo1.jpg";
 import { PiPhoneCall } from "react-icons/pi";
 
 function Banner() {
@@ -11,7 +11,13 @@ function Banner() {
     <div className="w-full h-auto">
       <div className="relative flex flex-col gap-16 md:gap-98 lg:gap-44 overflow-hidden items-center justify-center">
         <div className="absolute w-full object-cover opacity-50 h-1/2 top-0">
-          <video autoPlay loop muted id="video" className="h-full w-full object-cover">
+          <video
+            autoPlay
+            loop
+            muted
+            id="video"
+            className="h-full w-full object-cover"
+          >
             <source src={sea} />
           </video>
         </div>
@@ -63,15 +69,18 @@ function Banner() {
             </div>
           </div>
         </motion.div>
-
-        <a
+        <motion.a
           href="tel:+91  7907224281"
-          className="absolute  md:block lg:block z-40 bottom-20 md:bottom-24 lg:bottom-16 border bg-[#F9DABB] border-none px-4 py-2"
+          className="absolute md:block lg:block z-40 bottom-20 md:bottom-24 lg:bottom-16 flex items-center justify-center gap-2 bg-gradient-to-r from-[#F7F5EF] via-[#F9DABB] to-[#fff] text-black px-6 py-3 rounded-full shadow-lg hover:shadow-xl hover:bg-gradient-to-l transition-all duration-300 ease-in-out transform hover:scale-105"
+          whileHover={{ scale: 1.1 }}
         >
-          <h1 className="text-lg md:text-xl lg:text-xl font-semibold text-black">
-            Book Now
-          </h1>
-        </a>
+          <div className="flex gap-2">
+            <MdAdsClick className="text-2xl" />
+            <span className="text-lg md:text-xl lg:text-xl font-semibold">
+              Book Now
+            </span>
+          </div>
+        </motion.a>
       </div>
     </div>
   );

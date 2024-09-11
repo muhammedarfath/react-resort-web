@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, CardBody, Image } from "@nextui-org/react";
 import { FaUmbrellaBeach } from "react-icons/fa6";
-import pool from "../../assets/pool.jpg";
+import img from "../../assets/entry1.jpg";
 import seat from "../../assets/one.jpg";
 import beach from "../../assets/beach.jpg";
 import food from "../../assets/foodarea.jpg";
@@ -22,7 +22,7 @@ function SectionFive() {
             <Image
               alt="Card background"
               className="object-cover rounded-xl w-96 h-96"
-              src={pool}
+              src={img}
             />
           </CardBody>
         </Card>

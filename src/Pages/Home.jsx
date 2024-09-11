@@ -14,8 +14,8 @@ function Home() {
   return (
     <div>
       <Banner />
-      <SectionAdd/>
       <Sectionone />
+      <SectionAdd/>
       <Sectiontwo />
       <SectionThree />
       <SectionFour />

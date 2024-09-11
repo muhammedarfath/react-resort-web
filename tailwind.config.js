@@ -10,6 +10,10 @@ export default {
       fontFamily: {
         'cormorant': ['"Cormorant Garamond"', 'serif'],
         sans: ['Montserrat', 'sans-serif'],
+        sansy: ['Inter', 'sans-serif'],
+        'custom': ["Helvetica Neue", 'Helvetica', 'Arial', 'sans-serif']
+
+
       },
     },
   },

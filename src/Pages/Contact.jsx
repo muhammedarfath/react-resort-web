@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { toast, Toaster } from "react-hot-toast";
 import Map from "../components/Sections/Map";
+import { FaSpinner } from "react-icons/fa";
 
 function Contact() {
+  const [loading, setLoading] = useState(false);
+
   const onSubmit = async (event) => {
     event.preventDefault();
-    const formData = new FormData(event.target);
+    setLoading(true); // Start loading
 
+    const formData = new FormData(event.target);
     formData.append("access_key", "3dc9160f-4797-4cea-9a14-0bd7c3a8d621");
 
     const object = Object.fromEntries(formData);
@@ -29,6 +33,8 @@ function Contact() {
       }
     } catch (error) {
       toast.error("Network error. Please check your connection.");
+    } finally {
+      setLoading(false); // Stop loading
     }
   };
 
@@ -49,7 +55,6 @@ function Contact() {
             <div>
               <label
                 htmlFor="email"
-                name="email"
                 className="block mb-2 text-sm font-medium text-black"
               >
                 Your email
@@ -94,8 +99,12 @@ function Contact() {
                 placeholder="Leave a comment..."
               ></textarea>
             </div>
-            <button type="submit" className="border p-3">
-              Send message
+            <button
+              type="submit"
+              className="border p-3 bg-[#F9DABB] text-black rounded flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+              disabled={loading}
+            >
+              {loading ? <FaSpinner className="animate-spin" /> : "Send message"}
             </button>
           </form>
         </div>
