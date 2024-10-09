@@ -11,17 +11,17 @@ function AboutText() {
           THE SEA BEACH RESORT
         </h1>
         <span className="text-sm sm:text-base md:text-lg lg:text-xl">
-          Established in 2024, The Sea Beach Resort in Alappuzha, Kerala, has
-          been dedicated to providing a serene beachfront escape for our guests.
+          Established in 2024, The Sea Beach Resort in Alappuzha, Kerala, is
+          dedicated to providing a serene beachfront escape for our guests.
           With stunning sea view rooms, a romantic honeymoon cottage, and a
-          relaxing mini swimming pool, we offer a perfect blend of comfort and
+          relaxing mini swimming pool, we offer the perfect blend of comfort and
           natural beauty. Our commitment to exceptional service and homely
           dining ensures a memorable stay by the sea.
         </span>
       </div>
       <div className="flex flex-wrap justify-center gap-10 md:gap-20 lg:gap-36">
-        <div className="flex flex-col items-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl">8k</h1>
+        {/* <div className="flex flex-col items-center">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl">260</h1>
           <span className="text-sm sm:text-base md:text-lg">
             Happy Customers
           </span>
@@ -31,9 +31,9 @@ function AboutText() {
           <span className="text-sm sm:text-base md:text-lg">Bedrooms</span>
         </div>
         <div className="flex flex-col items-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl">3</h1>
-          <span className="text-sm sm:text-base md:text-lg">Square Areas</span>
-        </div>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl">4</h1>
+          <span className="text-sm sm:text-base md:text-lg">Suites</span>
+        </div> */}
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -9,9 +10,7 @@ function Footer() {
           <div className="flex flex-col md:flex-row justify-between gap-20 px-4 py-6">
             <div className="text-white flex flex-col gap-6 md:gap-11">
               <div>
-                <h2 className="mb-6 font-semibold text-white">
-                  Contact
-                </h2>
+                <h2 className="mb-6 font-semibold text-white">Contact</h2>
                 <p>
                   The Sea Beach Resort North Of Vijaya Childrens Park, <br />{" "}
                   Near United Club,
@@ -20,7 +19,12 @@ function Footer() {
               </div>
 
               <div>
-                <p>theseaalleppey@gmail.com</p>
+                <a
+                  href="mailto:theseaalleppey@gmail.com"
+                  className="text-white underline"
+                >
+                  theseaalleppey@gmail.com
+                </a>{" "}
                 <p>+919447400150</p>
               </div>
             </div>
@@ -31,24 +35,29 @@ function Footer() {
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-thin">
                 <li className="mb-4">
-                  <a href="/about" className="underline">
+                  <Link to="/about" className="underline">
                     About
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a href="/rooms" className="underline">
+                  <Link to="/rooms" className="underline">
                     Rooms
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a href="/contact" className="underline">
+                  <Link to="/contact" className="underline">
                     Contact
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="underline">
+                  <Link to="/privacypolicy" className="underline">
                     Privacy Policy
-                  </a>
+                  </Link>
+                </li>
+                <li className="mb-4">
+                  <Link to="/faq" className="underline">
+                    FAQ
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -87,9 +96,7 @@ function Footer() {
 
         <div className="flex flex-col md:flex-row justify-between border-t border-gray-700 py-6 px-4 md:px-14">
           <div className="mb-4 md:mb-0">
-            <span className="text-white">
-              © 2024 BeachResort.com. All rights reserved.
-            </span>
+            <span className="text-white">©️ 2024 The Sea Beach Resort </span>
           </div>
           <div className="mb-4 md:mb-0 flex items-center">
             <h1 className="text-white">THE SEA BEACH RESORT</h1>

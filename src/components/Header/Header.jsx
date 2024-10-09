@@ -7,12 +7,13 @@ import {
   RiGalleryFill,
   RiContactsFill,
   RiInformationFill,
+  RiBookFill,
 } from "react-icons/ri";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaPhone } from "react-icons/fa";
 import { Link, Outlet } from "react-router-dom";
 import Footer from "../Sections/Footer";
 import LoadingWrapper from "../Loading/LoadingWrapper";
-import logo from "../../assets/BlueLogo.png";
+import logo from "../../assets/Blue Island Beach Resort Logo.png";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -83,16 +84,21 @@ function Header() {
                 <img
                   src={logo}
                   alt="Logo"
-                  className="lg:w-24 lg:h-24 md:w-20 md:h-20 w-14 h-14 object-contain"
+                  className="lg:w-32 lg:h-32 md:w-20 md:h-20 w-20 h-20 object-contain"
                 />
               </Link>
             </div>
 
             <div className="lg:flex items-center gap-11 md:hidden hidden">
-              <h1 className="text-md font-semibold hidden lg:block md:block font-sans">
-                +91 9447400150
-              </h1>
-              <Link to="/contact">
+              <div>
+                <h1 className="text-md font-semibold hidden lg:block md:block font-sans">
+                  +91 9447400150
+                </h1>
+                <small>
+                  The Sea Beach Resort, <br /> Beach Road Alleppey
+                </small>
+              </div>
+              <Link to="/rooms">
                 <button className="p-3 text-md text-black">
                   Book Your Stay
                 </button>
@@ -149,14 +155,24 @@ function Header() {
         <Outlet />
         <Footer />
 
-        <a
-          href="https://wa.me/+919447400150"
-          className="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-3 rounded-full shadow-lg"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaWhatsapp className="text-3xl" />
-        </a>
+        <div className="fixed bottom-6 right-6 z-50 flex flex-col items-center space-y-3">
+          <a
+            href="tel:+91 9447400150"
+            className="bg-green-500 text-white p-3 rounded-full shadow-lg icon-bounce"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaPhone className="text-3xl" />
+          </a>
+          <a
+            href="https://wa.me/+919447400150"
+            className="bg-green-500 text-white p-3 rounded-full shadow-lg icon-bounce"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaWhatsapp className="text-3xl" />
+          </a>
+        </div>
       </LoadingWrapper>
     </>
   );

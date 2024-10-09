@@ -8,7 +8,6 @@ import imagefour from "../../assets/room4.jpg";
 import imagefive from "../../assets/room5.jpg";
 import imagesix from "../../assets/room6.jpg";
 import { motion } from "framer-motion";
-import { Skeleton } from "@nextui-org/react";
 
 const slides = [imageone, imagetwo, imagethree, imagefour, imagefive, imagesix];
 
@@ -45,10 +44,10 @@ function SectionTwo() {
       <div className="flex justify-between lg:flex-row flex-col w-full container">
         <div className="text-start mb-8">
           <small className="text-gray-600 block mb-1">EXPLORE</small>
-          <h1 className="text-3xl font-bold">Rooms & Suits</h1>
+          <h1 className="text-3xl font-bold">Rooms & Suite</h1>
         </div>
         <div className="flex gap-3 items-center">
-          <h1>VIEW ALL MORE</h1>
+          <h1>VIEW MORE</h1>
           <button
             className="bg-[#F5C18A] text-white p-2 rounded-full flex items-center justify-center"
             onClick={() => navigate("/rooms")}

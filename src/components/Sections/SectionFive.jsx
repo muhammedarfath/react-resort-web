@@ -3,7 +3,7 @@ import { Card, CardBody, Image } from "@nextui-org/react";
 import { FaUmbrellaBeach } from "react-icons/fa6";
 import img from "../../assets/entry1.jpg";
 import seat from "../../assets/one.jpg";
-import beach from "../../assets/beach.jpg";
+import beach from "../../assets/uniqone.jpg";
 import food from "../../assets/foodarea.jpg";
 import hall from "../../assets/hall.jpg";
 import flat from "../../assets/flat.jpg";

@@ -23,7 +23,7 @@ function Sectionone() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-14">
         <div className="flex flex-col gap-2 items-center">
           <GrWifi className="text-3xl sm:text-4xl" />
-          <h1 className="text-center text-lg sm:text-xl">Wifi & Internet</h1>
+          <h1 className="text-center text-lg sm:text-xl">Wifi</h1>
         </div>
         <div className="flex flex-col gap-2 items-center">
           <FaTv className="text-3xl sm:text-4xl" />

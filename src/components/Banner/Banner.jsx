@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { MdAdsClick } from "react-icons/md";
 import { motion } from "framer-motion";
 import mobilebanner from "../../assets/photo_2024-09-04_19-22-0.jpg";
 import sea from "../../assets/waves.mp4";
-import banner2 from "../../assets/photo1.jpg";
-import { PiPhoneCall } from "react-icons/pi";
+import { Link } from "react-router-dom";
+import { CarouselCustomNavigation } from "./CarouselCustomNavigation";
+import { MobileCarousel } from "./MobileCarousel";
 
 function Banner() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50); 
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div className="w-full h-auto">
       <div className="relative flex flex-col gap-16 md:gap-98 lg:gap-44 overflow-hidden items-center justify-center">
@@ -26,61 +38,28 @@ function Banner() {
         </h1>
 
         <div className="container hidden md:block md:mt-60 lg:mt-16 lg:block mx-auto z-30">
-          <img
-            src={banner2}
-            alt="Resort Banner"
-            className="w-full h-auto rounded-2xl"
-          />
+          <CarouselCustomNavigation />
         </div>
 
         <div className="container md:hidden lg:hidden mx-auto z-40 mt-16 p-5">
-          <img
-            src={mobilebanner}
-            alt="Mobile Resort Banner"
-            className="w-full h-auto rounded-2xl"
-          />
+          <MobileCarousel />
         </div>
 
         <motion.div
-          className="flex z-40 flex-col gap-5 md:gap-2 bg-white/50 backdrop-blur-lg absolute p-6 md:p-8 lg:p-12 top-48 md:top-44 lg:top-52 rounded-3xl left-4 md:left-16 lg:left-44 max-w-lg"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
+          className={`fixed transition-transform duration-300 ease-in-out ${
+            isScrolled
+              ? "bottom-40 right-4 rounded-full icon-bounce"
+              : "lg:bottom-36 lg:top-auto lg:left-1/2 bottom-80 left-1/2 md:bottom-80 md:top-96 md:left-1/2 transform -translate-x-1/2 rounded-lg"
+          } z-40 flex flex-col gap-5 md:gap-2 p-3`}
         >
-          <small className="text-sm md:text-base hidden lg:block">
-            THE SEA BEACH RESORT
-          </small>
-          <h1 className="text-xl md:text-2xl lg:text-3xl">
-            Book your room & <br /> enjoy the comfort
-          </h1>
-
-          <div className="flex gap-5 md:gap-7">
-            <div className="flex flex-col gap-2 md:gap-3">
-              <span className="text-4xl md:text-5xl lg:text-6xl font-bold">
-                6
-              </span>
-              <h1 className="text-lg md:text-xl lg:text-2xl"> Rooms</h1>
-            </div>
-            <div className="flex flex-col gap-2 md:gap-3">
-              <span className="text-4xl md:text-5xl lg:text-6xl font-bold">
-                4
-              </span>
-              <h1 className="text-lg md:text-xl lg:text-2xl"> Suits</h1>
-            </div>
-          </div>
-        </motion.div>
-        <motion.a
-          href="tel:+91  7907224281"
-          className="absolute md:block lg:block z-40 bottom-20 md:bottom-24 lg:bottom-16 flex items-center justify-center gap-2 bg-gradient-to-r from-[#F7F5EF] via-[#F9DABB] to-[#fff] text-black px-6 py-3 rounded-full shadow-lg hover:shadow-xl hover:bg-gradient-to-l transition-all duration-300 ease-in-out transform hover:scale-105"
-          whileHover={{ scale: 1.1 }}
-        >
-          <div className="flex gap-2">
+          <Link
+            to="/rooms"
+            className={`w-full flex justify-center items-center gap-2 bg-[#F9DABB] text-center ${isScrolled ? "rounded-full p-4" : "rounded-md p-3 "}  transition-all duration-300`}
+          >
             <MdAdsClick className="text-2xl" />
-            <span className="text-lg md:text-xl lg:text-xl font-semibold">
-              Book Now
-            </span>
-          </div>
-        </motion.a>
+            {!isScrolled && <span>Book Your Stay</span>}
+          </Link>
+        </motion.div>
       </div>
     </div>
   );
