@@ -155,10 +155,10 @@ function Header() {
         <Outlet />
         <Footer />
 
-        <div className="fixed bottom-6 right-6 z-50 flex flex-col items-center space-y-3">
+        <div className="fixed bottom-9 right-6 z-50 flex flex-col items-center space-y-3">
           <a
             href="tel:+91 9447400150"
-            className="bg-green-500 text-white p-3 rounded-full shadow-lg icon-bounce"
+            className="bg-green-500 text-white p-3 rounded-full shadow-lg"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -166,7 +166,7 @@ function Header() {
           </a>
           <a
             href="https://wa.me/+919447400150"
-            className="bg-green-500 text-white p-3 rounded-full shadow-lg icon-bounce"
+            className="bg-green-500 text-white p-3 rounded-full shadow-lg"
             target="_blank"
             rel="noopener noreferrer"
           >

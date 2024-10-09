@@ -48,7 +48,7 @@ function Banner() {
         <motion.div
           className={`fixed transition-transform duration-300 ease-in-out ${
             isScrolled
-              ? "bottom-40 right-4 rounded-full icon-bounce"
+              ? "bottom-40 right-4 rounded-full"
               : "lg:bottom-36 lg:top-auto lg:left-1/2 bottom-80 left-1/2 md:bottom-80 md:top-96 md:left-1/2 transform -translate-x-1/2 rounded-lg"
           } z-40 flex flex-col gap-5 md:gap-2 p-3`}
         >
